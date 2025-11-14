@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DOCX → PDF Converter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="/config.js"></script>
+  </head>
+  <body>
+    <div class="app">
+      <div class="glass-card">
+        <h1 class="title">DOCX → PDF</h1>
+        <p class="subtitle">Fast, beautiful, and mobile‑friendly conversion</p>
+
+        <form id="uploadForm" class="upload" autocomplete="off">
+          <label for="file" class="dropzone" id="dropzone">
+            <input id="file" name="file" type="file" accept=".docx" hidden />
+            <div class="dz-inner">
+              <div class="icon">📄</div>
+              <div class="dz-text">
+                <strong>Choose a .docx file</strong>
+                <span>or drag & drop here</span>
+              </div>
+            </div>
+          </label>
+
+          <div class="controls">
+            <button id="convertBtn" class="btn" type="submit">Convert</button>
+          </div>
+        </form>
+
+        <div id="status" class="status hidden">
+          <div class="spinner"></div>
+          <span id="statusText">Uploading…</span>
+        </div>
+
+        <a id="downloadLink" class="download hidden" href="#" download
+          >Download PDF</a
+        >
+      </div>
+
+      <footer class="footer">Made with ❤️ for smooth conversions</footer>
+    </div>
+
+    <script src="/main.js"></script>
+  </body>
+</html>
